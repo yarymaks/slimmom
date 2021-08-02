@@ -29,7 +29,7 @@ app.use('/user', userRouter);
 app.use('/products', productRouter);
 app.use('/day', dayRouter);
 app.use('/daily-rate', dailyRateRouter);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Ответ на всех урлы, которые не заматчились
 app.use((req, res) => {
